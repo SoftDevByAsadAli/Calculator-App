@@ -1,0 +1,114 @@
+/* ====== GLOBAL RESET ====== */
+/* Removes default spacing so all browsers match */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* width includes padding and border */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* Dark gradient background */
+  background: linear-gradient(135deg, #2d3436, #636e72);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding: 20px;
+}
+
+/* ====== CALCULATOR BOX ====== */
+.calculator {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 340px;
+}
+
+/* ====== DISPLAY SCREEN ====== */
+.display {
+  background: #0f0f1a;
+  color: #fff;
+  font-size: 40px;
+  text-align: right;       /* numbers line up on the right */
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  min-height: 80px;
+
+  /* Stops long numbers from breaking the box */
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+/* ====== BUTTON GRID ====== */
+/* CSS Grid makes 4 equal columns */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ====== ALL BUTTONS ====== */
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2d2d44;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect for every button */
+.btn:hover {
+  background: #3d3d5c;
+  transform: translateY(-3px); /* lifts up slightly */
+}
+
+/* Operators (+, -, ×, ÷) in orange */
+.operator {
+  background: #e07a30;
+}
+
+.operator:hover {
+  background: #f08a40;
+}
+
+/* Clear and Delete in a softer color */
+.function {
+  background: #57606f;
+}
+
+.function:hover {
+  background: #6b7585;
+}
+
+/* Equals button in green */
+.equals {
+  background: #00b894;
+}
+
+.equals:hover {
+  background: #00d2a8;
+}
+
+/* The "0" button is wider (spans 2 columns) */
+.zero {
+  grid-column: span 2;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 380px) {
+  .btn {
+    padding: 16px;
+    font-size: 18px;
+  }
+  .display {
+    font-size: 32px;
+  }
+}
