@@ -15,7 +15,7 @@ A clean, modern, and responsive calculator web app. Built as a beginner project 
 
 ## Live Demo
 
-[View Live Demo](https://your-username.github.io/calculator/)
+[View Live Demo](https://softdevbyasadali.github.io/Calculator-App/)
 <!-- Replace the link above with your real GitHub Pages link -->
 
 ## Features
